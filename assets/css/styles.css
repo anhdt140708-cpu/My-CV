@@ -453,3 +453,32 @@ ul {
     scroll-behavior: auto !important;
   }
 }
+
+/* Định nghĩa hiệu ứng trượt từ dưới lên và hiện dần */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Định nghĩa hiệu ứng hiện dần tại chỗ */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Áp dụng vào class */
+.animate-pop {
+  animation: slideUp 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.animate-fade {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  animation-delay: 0.3s; /* Chạy sau tiêu đề một chút để tạo nhịp điệu */
+  opacity: 0; /* Giữ ẩn trước khi chạy */
+}

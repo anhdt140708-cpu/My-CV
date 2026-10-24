@@ -13,6 +13,27 @@
 
   <!-- Liên kết tới file CSS tách rời (yêu cầu của bài) -->
   <link rel="stylesheet" href="./assets/css/styles.css" />
+  <style>
+    input {
+            padding: 5px;
+            border: 1px solid pink;
+            border-radius: 8px;
+            outline: none !important;
+        }
+        input:focus {
+            border-color: purple;
+        }
+        input:user-invalid { border-color: red;}
+        input:user-valid { border-color: green;}
+        button {
+            padding: 5px 10px;
+            color: white;
+            background-color: grey;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+  </style>
 </head>
 
 <body>
@@ -156,6 +177,14 @@
     </div>
   </footer>
 
+  <fieldset>
+        <legend>Liên hệ sau</legend><br>
+        <label for="email">Email</label>
+        <input type="email" required placeholder="Nhập email" required><br>
+        <label for="name">Tên</label>
+        <input type="text" required placeholder="Nhập tên" required><br>
+        <button type="submit">Gửi</button>
+    </fieldset>
 </body>
 
 </html>
